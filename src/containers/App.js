@@ -32,8 +32,10 @@ const mapDispatchToProps = (dispatch) => {
 class App extends Component {
     //As the component got mounted the robots list will be visible
     componentDidMount(){
-        this.props.onRequesRobots();
-    }  
+        setTimeout(() => {
+            this.props.onRequesRobots();
+        }, 2500);
+    }
 
     render() {
         const {searchField, onSearchChange, robots, isLoading} = this.props;
